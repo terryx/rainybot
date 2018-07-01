@@ -1,0 +1,37 @@
+{
+  "name": "rainybot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.prd.js",
+  "dependencies": {
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "rxjs": "^6.2.1",
+    "telegraf": "^3.21.2",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "aws-sdk": "^2.262.1",
+    "serverless": "^1.27.3",
+    "sinon": "^6.0.0",
+    "standard": "^11.0.1"
+  },
+  "scripts": {
+    "test": "ava",
+    "local:tomorrow": "sls invoke local -f webhook --stage=prd --path=tests/seeds/tomorrow.js",
+    "deploy": "sls deploy --stage=prd",
+    "deploy:webhook": "sls deploy -f webhook --stage=prd",
+    "log": "sls logs -f webhook --stage=prd -t"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terryx/rainybot.git"
+  },
+  "author": "Terry Yuen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terryx/rainybot/issues"
+  },
+  "homepage": "https://github.com/terryx/rainybot#readme"
+}

@@ -1,0 +1,12 @@
+module.exports = () => ({
+  telegram: {
+    token: ''
+  },
+  nea: {
+    apikey: ''
+  },
+  aws: {
+    region: '',
+    role: ''
+  }
+})

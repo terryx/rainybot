@@ -1,0 +1,3 @@
+module.exports = {
+  body: '{"update_id":"",\n"message":{"message_id":"","from":{"id":"","is_bot":false,"first_name":"","last_name":"","username":"","language_code":""},"chat":{"id":"","first_name":"","last_name":"","username":"","type":""},"date":"","text":"/tomorrow","entities":[{"offset":0,"length":9,"type":"bot_command"}]}}'
+}

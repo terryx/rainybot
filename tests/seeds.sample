@@ -1,0 +1,13 @@
+{
+  "message": {
+    "chat": {
+      "id": ""
+    }
+  },
+  "callback_query": {
+    "data": "",
+    "from": {
+      "id": ""
+    }
+  }
+}

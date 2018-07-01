@@ -1,0 +1,30 @@
+service:
+  name: rainybot
+
+custom: ${file(./config.${opt:stage}.js)}
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage}
+  region: ${self:custom.aws.region}
+  role: ${self:custom.aws.role}
+  description: Rainy is a telegram bot know's everything about Singapore weather
+  environment:
+    TOKEN: ${self:custom.telegram.token}
+    APIKEY: ${self:custom.nea.apikey}
+
+package:
+  exclude:
+    - .git/**
+    - .gitignore
+    - .idea/**
+    - test/**
+
+functions:
+  webhook:
+    handler: funcs/webhook.incoming
+    events:
+      - http:
+          path: rainy/webhook
+          method: post
